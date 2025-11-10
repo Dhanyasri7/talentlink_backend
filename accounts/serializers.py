@@ -38,7 +38,8 @@ class ClientProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ClientProfile
-        fields = ['id', 'user', 'company_name', 'bio', 'contact_email']
+        fields = '__all__'
+        read_only_fields = ['user']
 
 
 class FreelancerProfileSerializer(serializers.ModelSerializer):
@@ -46,7 +47,8 @@ class FreelancerProfileSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = FreelancerProfile
-        fields = ['id', 'user', 'portfolio', 'skills', 'hourly_rate', 'availability']
+        fields = '__all__'
+        read_only_fields = ['user']
 
 
 # ---------- Project Serializer ----------

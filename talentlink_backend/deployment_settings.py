@@ -22,7 +22,8 @@ MIDDLEWARE = [
 ]
 
 CORS_ALLOWED_ORIGINS = [
-    "https://talentlink-frontend.onrender.com"
+    "https://talentlink-frontend.onrender.com",
+    "http://localhost:5173",
 ]
 
 STORAGES = { 

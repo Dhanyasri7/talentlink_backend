@@ -35,6 +35,7 @@ class ClientProfile(models.Model):
     company_name = models.CharField(max_length=255)
     bio = models.TextField(blank=True)
     contact_email = models.EmailField()
+    profile_image = models.ImageField(upload_to='profile_photos/', blank=True, null=True)
 
     def __str__(self):
         return self.company_name
@@ -47,6 +48,7 @@ class FreelancerProfile(models.Model):
     skills = models.CharField(max_length=255)
     hourly_rate = models.DecimalField(max_digits=6, decimal_places=2)
     availability = models.BooleanField(default=True)
+    profile_image = models.ImageField(upload_to='profile_photos/', blank=True, null=True)
 
     def __str__(self):
         return self.user.username
